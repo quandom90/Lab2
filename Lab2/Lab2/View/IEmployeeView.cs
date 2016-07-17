@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Lab2.View
 {
-    interface IEmployeeView 
+    public interface IEmployeeView 
     {
         ListView List { get; set; }
 

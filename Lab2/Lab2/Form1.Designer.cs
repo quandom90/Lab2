@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.grpOption = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboSort = new System.Windows.Forms.ComboBox();
             this.lvwEmployee = new System.Windows.Forms.ListView();
             this.colLast = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colFirst = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSSN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colEarned = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSort = new System.Windows.Forms.Button();
-            this.cboSort = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.grpOption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,28 @@
             this.grpOption.TabIndex = 5;
             this.grpOption.TabStop = false;
             this.grpOption.Text = "Options";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Sort By:";
+            // 
+            // cboSort
+            // 
+            this.cboSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSort.FormattingEnabled = true;
+            this.cboSort.Items.AddRange(new object[] {
+            "1. Last Name Ascending",
+            "2. Earned Descending",
+            "3. SSN Ascending"});
+            this.cboSort.Location = new System.Drawing.Point(9, 47);
+            this.cboSort.Name = "cboSort";
+            this.cboSort.Size = new System.Drawing.Size(153, 21);
+            this.cboSort.TabIndex = 8;
             // 
             // lvwEmployee
             // 
@@ -97,28 +119,6 @@
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = true;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
-            // 
-            // cboSort
-            // 
-            this.cboSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSort.FormattingEnabled = true;
-            this.cboSort.Items.AddRange(new object[] {
-            "1. Last Name Ascending",
-            "2. Earned Descending",
-            "3. SSN Ascending"});
-            this.cboSort.Location = new System.Drawing.Point(9, 47);
-            this.cboSort.Name = "cboSort";
-            this.cboSort.Size = new System.Drawing.Size(153, 21);
-            this.cboSort.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Sort By:";
             // 
             // Form1
             // 

@@ -10,12 +10,11 @@ namespace Lab2.Model
     public abstract class Employee : IPayable
     {
         
-        private class SortPaymentDescendingHelper : IComparer
+        private class SortPaymentDescendingHelper : IComparer<Employee>
         {
-            public int Compare(object x, object y)
+            public int Compare(Employee c1, Employee c2)
             {
-                Employee c1 = x as Employee;
-                Employee c2 = y as Employee;
+            
                 if (c1.GetPaymentAmount() < c2.GetPaymentAmount())
                 {
                     return 1;
@@ -34,9 +33,9 @@ namespace Lab2.Model
           
         }
 
-        public static IComparer sortPaymentAscending()
+        public static IComparer<Employee> sortPaymentAscending()
         {
-            return (IComparer) new SortPaymentDescendingHelper();
+            return (IComparer<Employee>) new SortPaymentDescendingHelper();
         }
 
         // read-only property that gets employee's first name
