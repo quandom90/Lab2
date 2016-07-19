@@ -10,6 +10,8 @@ namespace Lab2
     {
         /// <summary>
         /// The main entry point for the application.
+        /// Main method that enables app visual styles and sets comptaible text rendering defaults
+        /// then it goes ahead and runs the Form application.
         /// </summary>
         [STAThread]
         static void Main()
