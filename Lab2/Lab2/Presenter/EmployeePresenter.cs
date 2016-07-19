@@ -10,7 +10,9 @@ using Lab2.View;
 
 namespace Lab2.Presenter
 {
-    
+    /// <summary>
+    /// View class named EmployeePresenter
+    /// </summary>
     public class EmployeePresenter
     {
         private IEmployeeView view;
@@ -19,6 +21,10 @@ namespace Lab2.Presenter
         private const string OPTION_2 = "2. Earned Descending";
         private const string OPTION_3 = "3. SSN Ascending";
 
+        /// <summary>
+        /// Presenter IEmployee view
+        /// </summary>
+        /// <param name="view"></param>
         public EmployeePresenter(IEmployeeView view)
         {
             this.view = view;
@@ -27,6 +33,10 @@ namespace Lab2.Presenter
             PrintEmployeeList(this.model.Employees);
         }
 
+        /// <summary>
+        /// Method to print an employee list that takes in param of Employee array
+        /// </summary>
+        /// <param name="emp"></param>
         private void PrintEmployeeList(Employee[] emp)
         {
             this.view.List.Items.Clear();
@@ -37,6 +47,9 @@ namespace Lab2.Presenter
             }
         }
 
+        /// <summary>
+        /// Sorting method to implement the 3 different sorting options
+        /// </summary>
         public void Sort()
         {
             if (view.Option == OPTION_1)
